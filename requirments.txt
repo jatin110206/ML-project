@@ -1,6 +1,25 @@
 pandas
 numpy
 seaborn
-sys
 datetime
--e .
+ipykernel
+pandas
+numpy
+lxml
+html5lib
+beautifulsoup4
+openpyxl
+matplotlib
+seaborn
+flask
+streamlit
+watchdog
+scikit-learn
+imblearn
+statsmodels
+Flask
+plotly
+nbformat
+kneed
+catboost
+xgboost
