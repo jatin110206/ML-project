@@ -8,6 +8,8 @@ from src.exeption import CustomExeption
 
 from src.components.data_transformation import DataTransformation, DataTransformationConfig
 
+from src.components.model_trainer import ModelTrainerConfig,ModelTrainer
+
 @dataclass
 class DataIngestionConfig:
     train_data_path: str = os.path.join('artifact', 'train.csv')
@@ -60,8 +62,6 @@ if __name__ == '__main__':
 
     data_transformation = DataTransformation()
     train_arr, test_arr, preprocessor_path = data_transformation.initiate_data_transform(train_path, test_path)
-
-    print(f"✅ Data ingestion and transformation completed successfully.")
-    print(f"Train: {train_path}\nTest: {test_path}")
-    print(f"Train array shape: {train_arr.shape}, Test array shape: {test_arr.shape}")
-    print(f"Preprocessor saved at: {preprocessor_path}")
+    modeltrainer=ModelTrainer()
+    print(modeltrainer.initiate_model_trainer(train_arr,test_arr))
+    

@@ -92,7 +92,7 @@ class DataTransformation:
             input_features_test_arr=preprocessor_obj.transform(input_features_test_df)
             
             train_arr = np.concatenate([input_features_train_arr, np.array(output_features_train_df).reshape(-1, 1)], axis=1)
-            test_arr = np.concatenate([input_features_test_df, np.array(output_features_test_df).reshape(-1, 1)], axis=1)
+            test_arr = np.concatenate([input_features_test_arr, np.array(output_features_test_df).reshape(-1, 1)], axis=1)
 
             
             logging.info("saved preprocessing object")
